@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="VideoPortal.master.cs" Inherits="OnlineVideoPortal.VideoPortal" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link href="Style/Main.css" rel="stylesheet" />
+    <title>UPES - Video Portal</title>
+    <link rel = "shortcut icon" href = "~/Images/favicon.ico" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+        <div class = "page">
+            <div>
+                <br />
+                <a href="Home.aspx"><img src="/Images/logo.png" alt="UPESLOGO" style="float:left" /></a>
+                <p style="color: #FF9933">
+                    <h3>
+                    <a href="About.aspx" style="text-decoration:none; color: #ff3700"><b>About Us&nbsp&nbsp&nbsp</b></a>
+                    <a href="https://stu.upes.ac.in/" style="text-decoration:none; color: #ff3700"><b>Student Portal&nbsp&nbsp&nbsp</b></a>
+                    <a href="http://library.ddn.upes.ac.in:8081/upeslib/" style="text-decoration:none; color:#ff3700"><b>Library&nbsp&nbsp&nbsp</b></a>
+                    <a href="https://upes.winnou.net/" style="text-decoration:none; color:#ff3700"><b>CORTAS&nbsp&nbsp&nbsp</b></a>
+                    <a href="https://upes-hd.ddn.upes.ac.in/upeshd/" style="text-decoration:none; color:#ff3700"><b>Helpdesk</b></a>
+                    </h3>
+                </p>
+            </div>
+            <div>
+                <img src="/Images/120hbanner_School-of-computer-science.jpg" alt="BannerOfSoCS" style="width: 996px; height: 323px; margin-left: 0px" />
+            </div>
+
+            <div id = "contentpart">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <div id = "footer" style="background-color: #FFFF00">
+                <br />
+                &copy UPES - Online Video Portal (April- 2018)
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>

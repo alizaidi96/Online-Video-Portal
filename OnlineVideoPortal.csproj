@@ -1,0 +1,496 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4D026A26-69A6-4A27-A9E3-F397300E9B16}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OnlineVideoPortal</RootNamespace>
+    <AssemblyName>OnlineVideoPortal</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="About.aspx" />
+    <Content Include="AdminLogin.aspx" />
+    <Content Include="AdminPanel\AddFaculty.aspx" />
+    <Content Include="AdminPanel\AdminHome.aspx" />
+    <Content Include="AdminPanel\RemoveFaculty.aspx" />
+    <Content Include="Courses\Baoo\Bao.aspx" />
+    <Content Include="Courses\Baoo\BaoVid.aspx" />
+    <Content Include="Courses\Bfsii\Bfsi.aspx" />
+    <Content Include="Courses\Bfsii\BfsiVid.aspx" />
+    <Content Include="Courses\BigDataa\BigData.aspx" />
+    <Content Include="Courses\BigDataa\BigDataVid.aspx" />
+    <Content Include="Courses\Ccvtt\Ccvt.aspx" />
+    <Content Include="Courses\Ccvtt\CcvtVid.aspx" />
+    <Content Include="Courses\Csff\Csf.aspx" />
+    <Content Include="Courses\Csff\CsfVid.aspx" />
+    <Content Include="Courses\Ecraa\Ecra.aspx" />
+    <Content Include="Courses\Ecraa\EcraVid.aspx" />
+    <Content Include="Courses\Gamingg\Gaming.aspx" />
+    <Content Include="Courses\Gamingg\GamingVid.aspx" />
+    <Content Include="Courses\Itinfraa\Itinfra.aspx" />
+    <Content Include="Courses\Itinfraa\ItinfraVid.aspx" />
+    <Content Include="Courses\Mainframee\Mainframe.aspx" />
+    <Content Include="Courses\Mainframee\MainframeVid.aspx" />
+    <Content Include="Courses\Ogii\Ogi.aspx" />
+    <Content Include="Courses\Ogii\OgiVid.aspx" />
+    <Content Include="FacultyLogin.aspx" />
+    <Content Include="FacultyPanel\FacultyHome.aspx" />
+    <Content Include="FacultyPanel\UploadVid.aspx" />
+    <Content Include="FacultyRegister.aspx" />
+    <Content Include="Images\120hbanner_School-of-computer-science.jpg" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\socs-dean.png" />
+    <Content Include="StudentHome.aspx" />
+    <Content Include="StudentLogin.aspx" />
+    <Content Include="StudentRegister.aspx" />
+    <Content Include="VideoPortal.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Home.aspx" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\grey.jpg" />
+    <Content Include="Images\UPES Logo.jpg" />
+    <Content Include="Style\Main.css" />
+    <Content Include="Videos\ASA2.mp4" />
+    <Content Include="Videos\ASA3.mp4" />
+    <Content Include="Videos\BDC1.mp4" />
+    <Content Include="Videos\BDC2.mp4" />
+    <Content Include="Videos\BDO1.mp4" />
+    <Content Include="Videos\BDO2.mp4" />
+    <Content Include="Videos\BDT1.mp4" />
+    <Content Include="Videos\BDT2.mp4" />
+    <Content Include="Videos\BI1.mp4" />
+    <Content Include="Videos\BI2.mp4" />
+    <Content Include="Videos\BIO.mp4" />
+    <Content Include="Videos\BoB.mp4" />
+    <Content Include="Videos\BPM1.mp4" />
+    <Content Include="Videos\BPM2.mp4" />
+    <Content Include="Videos\CAA1.mp4" />
+    <Content Include="Videos\CAA2.mp4" />
+    <Content Include="Videos\CCA1.mp4" />
+    <Content Include="Videos\CCA2.mp4" />
+    <Content Include="Videos\CCP.mp4" />
+    <Content Include="Videos\CRM1.mp4" />
+    <Content Include="Videos\CRM2.mp4" />
+    <Content Include="Videos\DA1.mp4" />
+    <Content Include="Videos\DA2.mp4" />
+    <Content Include="Videos\DAOG1.mp4" />
+    <Content Include="Videos\DBMS1.mp4" />
+    <Content Include="Videos\DI1.mp4" />
+    <Content Include="Videos\DI2.mp4" />
+    <Content Include="Videos\DIP1.mp4" />
+    <Content Include="Videos\DIP2.mp4" />
+    <Content Include="Videos\DP1.mp4" />
+    <Content Include="Videos\DP2.mp4" />
+    <Content Include="Videos\DP3.mp4" />
+    <Content Include="Videos\DPR1.mp4" />
+    <Content Include="Videos\EPS1.mp4" />
+    <Content Include="Videos\EPS2.mp4" />
+    <Content Include="Videos\FoM1.mp4" />
+    <Content Include="Videos\FoM2.mp4" />
+    <Content Include="Videos\FoOGB1.mp4" />
+    <Content Include="Videos\FoOGB2.mp4" />
+    <Content Include="Videos\GP1.mp4" />
+    <Content Include="Videos\ISF1.mp4" />
+    <Content Include="Videos\ISF2.mp4" />
+    <Content Include="Videos\ITAD1.mp4" />
+    <Content Include="Videos\ITAD2.mp4" />
+    <Content Include="Videos\ITAS1.mp4" />
+    <Content Include="Videos\ITAS2.mp4" />
+    <Content Include="Videos\ITDS1.mp4" />
+    <Content Include="Videos\ITDS2.mp4" />
+    <Content Include="Videos\ITDS3.mp4" />
+    <Content Include="Videos\ItG1.mp4" />
+    <Content Include="Videos\ItG2.mp4" />
+    <Content Include="Videos\ITIL1.mp4" />
+    <Content Include="Videos\ITIL2.mp4" />
+    <Content Include="Videos\ITIM1.mp4" />
+    <Content Include="Videos\ITNS.mp4" />
+    <Content Include="Videos\ITSD1.mp4" />
+    <Content Include="Videos\ITSM1.mp4" />
+    <Content Include="Videos\IV1.mp4" />
+    <Content Include="Videos\IV2.mp4" />
+    <Content Include="Videos\LoM1.mp4" />
+    <Content Include="Videos\MAD1.mp4" />
+    <Content Include="Videos\MAD2.mp4" />
+    <Content Include="Videos\MAD3.mp4" />
+    <Content Include="Videos\MAP1.mp4" />
+    <Content Include="Videos\MAP2.mp4" />
+    <Content Include="Videos\MC1.mp4" />
+    <Content Include="Videos\MC2.mp4" />
+    <Content Include="Videos\MDBMS1.mp4" />
+    <Content Include="Videos\MDBMS2.mp4" />
+    <Content Include="Videos\Mining1.mp4" />
+    <Content Include="Videos\Mining2.mp4" />
+    <Content Include="Videos\MOS1.mp4" />
+    <Content Include="Videos\Oil Refinery.mp4" />
+    <Content Include="Videos\OMA.mp4" />
+    <Content Include="Videos\RA1.mp4" />
+    <Content Include="Videos\RA2.mp4" />
+    <Content Include="Videos\RBM1.mp4" />
+    <Content Include="Videos\RBM2.mp4" />
+    <Content Include="Videos\RBM3.mp4" />
+    <Content Include="Videos\RBVIB.mp4" />
+    <Content Include="Videos\SBA.mp4" />
+    <Content Include="Videos\SCM1.mp4" />
+    <Content Include="Videos\SCM2.mp4" />
+    <Content Include="Videos\SCM3.mp4" />
+    <Content Include="Videos\SOA1.mp4" />
+    <Content Include="Videos\SOA2.mp4" />
+    <Content Include="Videos\UPE1.mp4" />
+    <Content Include="Videos\UPE2.mp4" />
+    <Content Include="Videos\Warehousing1.mp4" />
+    <Content Include="Videos\Warehousing2.mp4" />
+    <Content Include="Videos\WM.mp4" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AddFaculty.aspx.cs">
+      <DependentUpon>AddFaculty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AddFaculty.aspx.designer.cs">
+      <DependentUpon>AddFaculty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AdminHome.aspx.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AdminHome.aspx.designer.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\RemoveFaculty.aspx.cs">
+      <DependentUpon>RemoveFaculty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\RemoveFaculty.aspx.designer.cs">
+      <DependentUpon>RemoveFaculty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Courses\Baoo\Bao.aspx.cs">
+      <DependentUpon>Bao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Courses\Baoo\Bao.aspx.designer.cs">
+      <DependentUpon>Bao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Courses\Baoo\BaoVid.aspx.cs">
+      <DependentUpon>BaoVid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Courses\Baoo\BaoVid.aspx.designer.cs">
+      <DependentUpon>BaoVid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Courses\Bfsii\Bfsi.aspx.cs">
+      <DependentUpon>Bfsi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Courses\Bfsii\Bfsi.aspx.designer.cs">
+      <DependentUpon>Bfsi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Courses\Bfsii\BfsiVid.aspx.cs">
+      <DependentUpon>BfsiVid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Courses\Bfsii\BfsiVid.aspx.designer.cs">
+      <DependentUpon>BfsiVid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Courses\BigDataa\BigData.aspx.cs">
+      <DependentUpon>BigData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Courses\BigDataa\BigData.aspx.designer.cs">
+      <DependentUpon>BigData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Courses\BigDataa\BigDataVid.aspx.cs">
+      <DependentUpon>BigDataVid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Courses\BigDataa\BigDataVid.aspx.designer.cs">
+      <DependentUpon>BigDataVid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Courses\Ccvtt\Ccvt.aspx.cs">
+      <DependentUpon>Ccvt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Courses\Ccvtt\Ccvt.aspx.designer.cs">
+      <DependentUpon>Ccvt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Courses\Ccvtt\CcvtVid.aspx.cs">
+      <DependentUpon>CcvtVid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Courses\Ccvtt\CcvtVid.aspx.designer.cs">
+      <DependentUpon>CcvtVid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Courses\Csff\Csf.aspx.cs">
+      <DependentUpon>Csf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Courses\Csff\Csf.aspx.designer.cs">
+      <DependentUpon>Csf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Courses\Csff\CsfVid.aspx.cs">
+      <DependentUpon>CsfVid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Courses\Csff\CsfVid.aspx.designer.cs">
+      <DependentUpon>CsfVid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Courses\Ecraa\Ecra.aspx.cs">
+      <DependentUpon>Ecra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Courses\Ecraa\Ecra.aspx.designer.cs">
+      <DependentUpon>Ecra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Courses\Ecraa\EcraVid.aspx.cs">
+      <DependentUpon>EcraVid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Courses\Ecraa\EcraVid.aspx.designer.cs">
+      <DependentUpon>EcraVid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Courses\Gamingg\Gaming.aspx.cs">
+      <DependentUpon>Gaming.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Courses\Gamingg\Gaming.aspx.designer.cs">
+      <DependentUpon>Gaming.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Courses\Gamingg\GamingVid.aspx.cs">
+      <DependentUpon>GamingVid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Courses\Gamingg\GamingVid.aspx.designer.cs">
+      <DependentUpon>GamingVid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Courses\Itinfraa\Itinfra.aspx.cs">
+      <DependentUpon>Itinfra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Courses\Itinfraa\Itinfra.aspx.designer.cs">
+      <DependentUpon>Itinfra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Courses\Itinfraa\ItinfraVid.aspx.cs">
+      <DependentUpon>ItinfraVid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Courses\Itinfraa\ItinfraVid.aspx.designer.cs">
+      <DependentUpon>ItinfraVid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Courses\Mainframee\Mainframe.aspx.cs">
+      <DependentUpon>Mainframe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Courses\Mainframee\Mainframe.aspx.designer.cs">
+      <DependentUpon>Mainframe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Courses\Mainframee\MainframeVid.aspx.cs">
+      <DependentUpon>MainframeVid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Courses\Mainframee\MainframeVid.aspx.designer.cs">
+      <DependentUpon>MainframeVid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Courses\Ogii\Ogi.aspx.cs">
+      <DependentUpon>Ogi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Courses\Ogii\Ogi.aspx.designer.cs">
+      <DependentUpon>Ogi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Courses\Ogii\OgiVid.aspx.cs">
+      <DependentUpon>OgiVid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Courses\Ogii\OgiVid.aspx.designer.cs">
+      <DependentUpon>OgiVid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FacultyLogin.aspx.cs">
+      <DependentUpon>FacultyLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FacultyLogin.aspx.designer.cs">
+      <DependentUpon>FacultyLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FacultyPanel\FacultyHome.aspx.cs">
+      <DependentUpon>FacultyHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FacultyPanel\FacultyHome.aspx.designer.cs">
+      <DependentUpon>FacultyHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FacultyPanel\UploadVid.aspx.cs">
+      <DependentUpon>UploadVid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FacultyPanel\UploadVid.aspx.designer.cs">
+      <DependentUpon>UploadVid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FacultyRegister.aspx.cs">
+      <DependentUpon>FacultyRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FacultyRegister.aspx.designer.cs">
+      <DependentUpon>FacultyRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentHome.aspx.cs">
+      <DependentUpon>StudentHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentHome.aspx.designer.cs">
+      <DependentUpon>StudentHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentLogin.aspx.cs">
+      <DependentUpon>StudentLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentLogin.aspx.designer.cs">
+      <DependentUpon>StudentLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentRegister.aspx.cs">
+      <DependentUpon>StudentRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentRegister.aspx.designer.cs">
+      <DependentUpon>StudentRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VideoPortal.Master.cs">
+      <DependentUpon>VideoPortal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VideoPortal.Master.designer.cs">
+      <DependentUpon>VideoPortal.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Courses\Osss\" />
+    <Folder Include="StudentPanel\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57066</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57066/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
